@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    background-color: var(--clr-secondary);
+}
+
+:root {
+    --clr-secondary : rgb(188, 222, 224);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+}
+
+.header-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-title {
+    font-size: 2.5rem;
+}
+
+.header-text {
+    font-size: 1.2rem;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    column-gap: 1rem;
+    width: 90%;
+}
+
+.content-wrapper img {
+    max-width: 220px;
+    border-radius: 1rem;
+}
+
+.attributes-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 3.5fr;
+    grid-template-areas: 
+        "list"
+        "texte";
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.attributes-wrapper > .attributes-list {
+    grid-area: list;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.attribute-item {
+    font-size: 1.1rem;
+    padding: 1.3rem;
+    background-color: #ddd;
+    border: 2px solid rgb(93, 91, 91);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.attribute-item:hover {
+    background-color: rgb(151, 216, 219);
+    color: darkcyan;
+    border: 2px solid darkcyan;
+}
+/* When pressed */
+.btn-active {
+    background-color: rgb(151, 216, 219);
+    color: darkcyan;
+    border: 2px solid darkcyan;
+}
+
+.attributes-text-wrapper {
+    grid-area: texte;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    font-size: 1.1rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    height: 90%;
+    width: 90%;
+    background-color: var(--clr-secondary);
+}
+
+.attribute-text {
+    display: none;
+}
+
+.active {
+    display: grid;
+    grid-template-columns: 1.9fr 1fr;
+    grid-template-areas: 
+        "paragraph img"
+        "goal img";
+    grid-gap: 2rem;
+    position: relative;
+}
+
+
+.attributes-paragraph{
+    grid-area: paragraph;
+    font-size: 1.5rem;
+    margin: auto 0;
+    text-align: center;
+}
+
+.goals-heading {
+    grid-area: goal;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.attributes-goals-list {
+    grid-area: goal;
+    text-align: left;
+    /* list-style: none; */
+}
+
+.attribute-text img {
+    grid-area: img;
+    width: 22rem;
+    height: 16rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
